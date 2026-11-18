@@ -6,7 +6,7 @@ Expone `POST /extract`: recibe el PDF como cuerpo binario o como `multipart/form
 
 ## Dependencias
 
-PyMuPDF está en la 2.1, una versión mayor: con la 1.28.2 y con la 2.1, los 4 PDFs de prueba dan el mismo `content` y `page_count`. La 2.x incorpora pymupdf4llm y suma dependencias que el servicio no usa, como onnxruntime y numpy, que agrandan la imagen unos 150 MB; Trivy no informó vulnerabilidades en ellas.
+PyMuPDF está en la 2.1, una versión mayor: con la 1.28.2 y con la 2.1, los 4 PDFs de prueba dan el mismo `content` y `page_count`. La 2.x incorpora pymupdf4llm y suma dependencias que el servicio no usa, como onnxruntime y numpy, que agrandan la imagen unos 330 MB (de 339 MB a 668 MB); Trivy no informó vulnerabilidades en ellas.
 
 ## Tests
 
