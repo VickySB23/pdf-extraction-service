@@ -4,6 +4,10 @@ Microservicio stateless que extrae el texto de un PDF y lo devuelve en Markdown 
 
 Expone `POST /extract`: recibe el PDF como cuerpo binario o como `multipart/form-data` y responde `{"content": "...", "page_count": N}`. Escucha en el puerto `8001`, no guarda estado y usa PyMuPDF para la extracción.
 
+## Dependencias
+
+PyMuPDF está en la 2.1, una versión mayor: con la 1.28.2 y con la 2.1, los 4 PDFs de prueba dan el mismo `content` y `page_count`. La 2.x incorpora pymupdf4llm y suma dependencias que el servicio no usa, como onnxruntime y numpy, que agrandan la imagen unos 150 MB; Trivy no informó vulnerabilidades en ellas.
+
 ## Tests
 
 Requiere Python 3.11 o superior y [uv](https://docs.astral.sh/uv/).
